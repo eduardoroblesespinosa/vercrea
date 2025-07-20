@@ -1,0 +1,181 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo Dios: Verbo Creador</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">MODO DIOS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#inicio" data-section="inicio">Verbo Creador</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#afirmaciones" data-section="afirmaciones">Afirmaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#activacion" data-section="activacion">Activación</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reprogramacion" data-section="reprogramacion">Reprogramación 21 Días</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#diario" data-section="diario">Diario de Resultados</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Particle background container -->
+    <div id="particles-js"></div>
+
+    <main class="container text-white text-center">
+        <!-- 1. Section: Verbo Creador (Inicio) -->
+        <section id="inicio" class="page-section active">
+            <div class="d-flex flex-column justify-content-center align-items-center min-vh-100">
+                <div class="atom-container spin">
+                    <div class="atom">
+                        <div class="nucleus"></div>
+                        <div class="electron"></div>
+                        <div class="electron"></div>
+                        <div class="electron"></div>
+                    </div>
+                </div>
+                <h1 class="main-title mt-4">La Palabra es el principio. Aquí comienza tu poder.</h1>
+                <div class="intro-box mt-4">
+                    <h2 class="h4">Modo Dios: Verbo Creador</h2>
+                    <p><strong>Qué es:</strong> Una herramienta para alinear tu energía con la frecuencia de la creación a través de la palabra, hablada y escrita.</p>
+                    <p><strong>Para qué sirve:</strong> Para enfocar tu intención y energía en la manifestación consciente, la sanación personal y la transformación de tu realidad.</p>
+                    <p><strong>Qué puede lograr:</strong> Al usar tu voz y tus pensamientos de forma deliberada, puedes reprogramar tu subconsciente, elevar tu vibración y materializar tus deseos en el plano físico.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Section: Afirmaciones -->
+        <section id="afirmaciones" class="page-section">
+            <div class="d-flex flex-column justify-content-center min-vh-100">
+                 <h2 class="display-4">Crea tus Afirmaciones</h2>
+                 <p class="lead mb-5">Escribe tu intención y grábala con el poder de tu voz.</p>
+                <div class="row g-4">
+                    <!-- Columna Afirmaciones -->
+                    <div class="col-md-6">
+                        <h3 class="h4">1. Escribe tu Afirmación</h3>
+                        <textarea id="affirmation-text" class="form-control" rows="8" placeholder="Ej: 'Yo soy abundancia infinita. El universo conspira a mi favor.'"></textarea>
+                    </div>
+                    <!-- Columna Modo Voz -->
+                    <div class="col-md-6">
+                        <h3 class="h4">2. Graba con tu Voz</h3>
+                        <button id="record-btn" class="btn btn-primary btn-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-mic-fill" viewBox="0 0 16 16">
+                                <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0z"/>
+                                <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5"/>
+                            </svg>
+                            <span id="record-label">Grabar Voz</span>
+                        </button>
+                        <div id="recording-status" class="mt-3"></div>
+                        <div id="recordings-list" class="mt-3"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Section: Activacion -->
+        <section id="activacion" class="page-section">
+            <div class="d-flex flex-column justify-content-center align-items-center min-vh-100">
+                <h2 class="display-4">Activa tu Creación</h2>
+                <p class="lead mb-5">Interactúa con el Átomo del Verbo y sintoniza con la frecuencia divina.</p>
+
+                <div id="interactive-atom" class="atom-container">
+                     <div class="atom">
+                        <div class="nucleus"></div>
+                        <div class="electron"></div>
+                        <div class="electron"></div>
+                        <div class="electron"></div>
+                    </div>
+                </div>
+
+                <p class="mt-4">Pasa el mouse sobre el átomo para activarlo.</p>
+
+                <button id="freq-btn" class="btn btn-outline-light btn-lg mt-5">
+                    Activar Frecuencia 963 Hz
+                </button>
+            </div>
+        </section>
+
+        <!-- 4. Section: Reprogramación 21 Días -->
+        <section id="reprogramacion" class="page-section">
+            <div class="d-flex flex-column justify-content-center min-vh-100">
+                <h2 class="display-4">Reprogramación de 21 Días</h2>
+                <p class="lead mb-5">Comprométete con tu transformación. Un día a la vez.</p>
+                <div id="challenge-grid" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    <!-- Los días del reto se generarán aquí con JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Section: Diario de Resultados -->
+        <section id="diario" class="page-section">
+             <div class="d-flex flex-column justify-content-center min-vh-100">
+                <h2 class="display-4">Diario de Resultados</h2>
+                <p class="lead mb-5">Registra tu viaje y observa cómo se despliega tu nueva realidad.</p>
+
+                <!-- Progress Bar -->
+                <div class="progress-container mb-5">
+                    <label for="reality-progress" class="form-label">Indicador de Cambio de Realidad: <span id="progress-percentage">0%</span></label>
+                    <div class="progress" style="height: 10px;">
+                        <div id="reality-progress-bar" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <input type="range" class="form-range mt-2" min="0" max="100" id="reality-progress-slider">
+                </div>
+
+                <!-- Diary Entry Form -->
+                <div class="diary-form-container card bg-dark-transparent p-4 mb-5">
+                    <h3 class="h4 mb-3">Nueva Entrada del Diario</h3>
+                    <div class="mb-3">
+                        <label for="diary-changes" class="form-label">¿Qué cambios notaste hoy?</label>
+                        <textarea id="diary-changes" class="form-control" rows="3" placeholder="Ej: Me sentí más tranquilo, recibí una llamada inesperada..."></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="diary-sincronicities" class="form-label">¿Tuviste señales o sincronicidades?</label>
+                        <textarea id="diary-sincronicities" class="form-control" rows="3" placeholder="Ej: Vi repetidamente el número 11:11, una canción con un mensaje apareció..."></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="diary-emotions" class="form-label">¿Hubo emociones, sueños o ideas nuevas?</label>
+                        <textarea id="diary-emotions" class="form-control" rows="3" placeholder="Ej: Soñé con volar, se me ocurrió una nueva idea para un proyecto..."></textarea>
+                    </div>
+                    <button id="save-entry-btn" class="btn btn-primary">Guardar Entrada</button>
+                </div>
+
+                <!-- Saved Entries -->
+                <h3 class="h4 mt-4 mb-3">Mis Entradas</h3>
+                <div id="diary-entries-list" class="row row-cols-1 row-cols-md-2 g-4">
+                    <!-- Las entradas del diario se generarán aquí con JS -->
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- tsParticles -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.4.0/tsparticles.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="index.js"></script>
+</body>
+</html>

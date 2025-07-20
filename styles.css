@@ -1,0 +1,299 @@
+/* General Body and Background Styles */
+body {
+    background-color: #00000a;
+    color: #f0f0f0;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Page Section Management */
+.page-section {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    padding-top: 80px; /* Space for navbar */
+}
+
+.page-section.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Navbar */
+.navbar {
+    transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(0, 0, 10, 0.8) !important;
+    backdrop-filter: blur(5px);
+}
+
+.navbar-brand, .nav-link {
+    font-family: 'Cinzel', serif;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
+
+.nav-link.active {
+    color: #87CEFA !important; /* Light Sky Blue */
+    text-shadow: 0 0 8px #87CEFA;
+}
+
+/* Main Title - Brilliant Typography */
+.main-title {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #87CEFA, 0 0 30px #87CEFA, 0 0 40px #87CEFA;
+}
+
+@media (min-width: 768px) {
+    .main-title {
+        font-size: 3.5rem;
+    }
+}
+
+/* Atom del Verbo Styles */
+.atom-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.atom-container.spin .atom {
+    animation: spin 12s linear infinite;
+}
+
+.atom {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-out;
+}
+
+.nucleus {
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    top: 35%;
+    left: 35%;
+    background: radial-gradient(circle, #ffffff 20%, #87CEFA 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 15px 5px #87CEFA;
+    transition: all 0.5s ease-out;
+}
+
+.electron {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(135, 206, 250, 0.3);
+    border-radius: 50%;
+    transform-style: preserve-3d;
+}
+
+.electron::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    top: 50%;
+    left: -6px; /* half of width */
+    transform: translateY(-50%);
+    box-shadow: 0 0 10px #fff;
+    animation: orbit 4s linear infinite;
+}
+
+.electron:nth-child(2) { transform: rotateY(60deg) rotateX(0deg); }
+.electron:nth-child(3) { transform: rotateY(-60deg) rotateX(0deg); }
+.electron:nth-child(4) { transform: rotateY(0deg) rotateX(90deg); }
+
+.electron:nth-child(2)::before { animation-delay: -1s; }
+.electron:nth-child(3)::before { animation-delay: -2s; }
+.electron:nth-child(4)::before { animation-delay: -3s; }
+
+/* Interactive Atom on Activacion Page */
+#interactive-atom:hover .atom {
+    transform: scale(1.2);
+}
+
+#interactive-atom:hover .nucleus {
+    background: radial-gradient(circle, #ffffff 20%, #FFD700 100%);
+    box-shadow: 0 0 25px 10px #FFD700;
+}
+
+#interactive-atom:hover .electron {
+    border-color: rgba(255, 215, 0, 0.5);
+}
+
+/* Keyframe Animations */
+@keyframes spin {
+    from { transform: rotateY(0deg) rotateX(10deg); }
+    to { transform: rotateY(360deg) rotateX(10deg); }
+}
+
+@keyframes orbit {
+    from { transform: translateY(-50%) rotateZ(0deg) translateX(75px) rotateZ(0deg); }
+    to { transform: translateY(-50%) rotateZ(360deg) translateX(75px) rotateZ(-360deg); }
+}
+
+/* Afirmaciones Section */
+#affirmation-text {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: white;
+    border-color: rgba(135, 206, 250, 0.3);
+}
+#affirmation-text:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    box-shadow: 0 0 10px #87CEFA;
+    border-color: #87CEFA;
+}
+
+.intro-box {
+    background: rgba(135, 206, 250, 0.1);
+    border: 1px solid rgba(135, 206, 250, 0.3);
+    border-radius: 15px;
+    padding: 2rem;
+    max-width: 800px;
+    backdrop-filter: blur(5px);
+}
+
+.bg-dark-transparent {
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+/* Reprogramación 21 Días Section */
+.day-card {
+    background: rgba(135, 206, 250, 0.05);
+    border: 1px solid rgba(135, 206, 250, 0.2);
+    border-radius: 15px;
+    padding: 1.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(3px);
+}
+
+.day-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(135, 206, 250, 0.2);
+    border-color: rgba(135, 206, 250, 0.5);
+}
+
+.day-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-family: 'Cinzel', serif;
+}
+
+.day-number {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.medal-icon {
+    font-size: 1.8rem;
+    color: #FFD700; /* Gold */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    text-shadow: 0 0 10px #FFD700;
+}
+
+.affirmation-content {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.day-card.completed {
+    background: rgba(135, 206, 250, 0.15);
+    border-color: #FFD700;
+}
+
+.day-card.completed .medal-icon {
+    opacity: 1;
+}
+
+.form-check-input:checked {
+    background-color: #87CEFA;
+    border-color: #87CEFA;
+}
+
+.form-switch .form-check-label {
+    cursor: pointer;
+}
+
+.alert-secondary {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(135, 206, 250, 0.3);
+    color: white;
+}
+
+/* Diario de Resultados Section */
+.progress-container .form-label {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+}
+
+.form-range::-webkit-slider-thumb {
+    background: #87CEFA;
+}
+.form-range::-moz-range-thumb {
+    background: #87CEFA;
+}
+.progress-bar {
+    background-color: #87CEFA;
+    transition: width 0.3s ease-in-out;
+}
+
+.diary-card {
+    background: rgba(135, 206, 250, 0.08);
+    border: 1px solid rgba(135, 206, 250, 0.2);
+    border-radius: 15px;
+    padding: 1.5rem;
+    height: 100%;
+    backdrop-filter: blur(3px);
+    display: flex;
+    flex-direction: column;
+}
+
+.diary-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(135, 206, 250, 0.2);
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.diary-date {
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+}
+
+.diary-card-body p {
+    margin-bottom: 0.5rem;
+}
+
+.diary-card-body p strong {
+    color: #87CEFA;
+}
